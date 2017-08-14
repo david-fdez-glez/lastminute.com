@@ -1,6 +1,7 @@
 package org.dfernandez.lastminute.com.model;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Airline {
 
@@ -38,5 +39,29 @@ public class Airline {
 
     public void setInfantPrice(BigDecimal infantPrice) {
         this.infantPrice = infantPrice;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Airline airline = (Airline) o;
+        return Objects.equals(iataCode, airline.iataCode) &&
+                Objects.equals(infantPrice, airline.infantPrice);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(iataCode, name, infantPrice);
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Airline{");
+        sb.append("iataCode='").append(iataCode).append('\'');
+        sb.append(", name=").append(name);
+        sb.append(", infantPrice=").append(infantPrice);
+        sb.append('}');
+        return sb.toString();
     }
 }
