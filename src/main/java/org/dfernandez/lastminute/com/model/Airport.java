@@ -1,7 +1,6 @@
 package org.dfernandez.lastminute.com.model;
 
 import java.util.Objects;
-import java.util.function.Consumer;
 
 public class Airport {
 
@@ -12,10 +11,6 @@ public class Airport {
     public Airport(String iataCode, String city) {
         this.iataCode = iataCode;
         this.city = city;
-    }
-
-    public Airport(Consumer<Airport> builder) {
-        builder.accept(this);
     }
 
     public String getIataCode() {
@@ -44,14 +39,13 @@ public class Airport {
 
     @Override
     public int hashCode() {
-        return Objects.hash(iataCode);
+        return Objects.hash(iataCode, city);
     }
 
     @Override
     public String toString() {
-        return "[" + iataCode + ", " + city + "]";
+        return "Airport{" + iataCode + ", " + city + "}";
     }
-
 
 
 }
