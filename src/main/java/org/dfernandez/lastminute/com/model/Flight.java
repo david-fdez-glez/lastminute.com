@@ -1,6 +1,7 @@
 package org.dfernandez.lastminute.com.model;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 public class Flight {
@@ -15,15 +16,7 @@ public class Flight {
 
     private BigDecimal basePrice;
 
-    public Flight(String origin, String destination, String flightCode, Airline airline, BigDecimal basePrice) {
-        this.origin = origin;
-        this.destination = destination;
-        this.flightCode = flightCode;
-        this.airline = airline;
-        this.basePrice = basePrice;
-    }
-
-
+    
     public Flight(Consumer<Flight> builder) {
         builder.accept(this);
     }
@@ -66,5 +59,33 @@ public class Flight {
 
     public void setBasePrice(BigDecimal basePrice) {
         this.basePrice = basePrice;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Flight flight = (Flight) o;
+        return Objects.equals(origin, flight.origin) &&
+                Objects.equals(destination, flight.destination) &&
+                Objects.equals(flightCode, flight.flightCode) &&
+                Objects.equals(airline, flight.airline) &&
+                Objects.equals(basePrice, flight.basePrice);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(origin, destination, flightCode, basePrice);
+    }
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Flight{");
+        sb.append("origin=").append(origin);
+        sb.append(", destination=").append(destination);
+        sb.append(", flightCode=").append(flightCode);
+        sb.append(", ").append(airline);
+        sb.append(", basePrice= ").append(basePrice);
+        sb.append('}');
+        return sb.toString();
     }
 }
