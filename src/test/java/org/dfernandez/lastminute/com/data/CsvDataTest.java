@@ -19,7 +19,7 @@ import java.util.Map;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-public class DataTest {
+public class CsvDataTest {
 
     private final ClassLoader classLoader = getClass().getClassLoader();
     private final static String AIRPORT_FILE_NAME = "airports.csv";
