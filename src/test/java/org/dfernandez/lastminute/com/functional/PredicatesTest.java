@@ -67,11 +67,16 @@ public class PredicatesTest {
 
 
    @Test
-   public void emptyResult() {
+   public void emptyList() {
         List<Flight> result = FlightPredicates.filterFlights(emptyList, FlightPredicates.matchRoute(frankfurt.getIataCode(),amsterdam.getIataCode()));
         assertThat(result, is(empty()));
    }
 
+   @Test
+   public void emptyResults() {
+        List<Flight> result = FlightPredicates.filterFlights(flightList, FlightPredicates.matchRoute("CDG", "FRA"));
+        assertThat(result, is(empty()));
+   }
 
    @Test
     public void matchFlights() {

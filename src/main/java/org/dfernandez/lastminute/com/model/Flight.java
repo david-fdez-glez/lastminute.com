@@ -75,7 +75,7 @@ public class Flight {
 
     @Override
     public int hashCode() {
-        return Objects.hash(origin, destination, flightCode, basePrice);
+        return Objects.hash(origin, destination, flightCode, airline, basePrice);
     }
     @Override
     public String toString() {
