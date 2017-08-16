@@ -1,6 +1,5 @@
-package functional;
+package org.dfernandez.lastminute.com.functional;
 
-import org.dfernandez.lastminute.com.functional.FlightPredicates;
 import org.dfernandez.lastminute.com.model.Airline;
 import org.dfernandez.lastminute.com.model.Airport;
 import org.dfernandez.lastminute.com.model.Flight;
