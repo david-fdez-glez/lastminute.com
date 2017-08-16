@@ -37,6 +37,10 @@ public class FlightTicket {
         uniqueID = UUID.randomUUID().toString();
     }
 
+    public String getUniqueID() {
+        return uniqueID;
+    }
+
     public String getOrigin() {
         return origin;
     }
