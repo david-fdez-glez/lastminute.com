@@ -3,6 +3,7 @@ package org.dfernandez.lastminute.com.pricingrules;
 import org.dfernandez.lastminute.com.dto.SearchRequest;
 import org.dfernandez.lastminute.com.model.Flight;
 import org.dfernandez.lastminute.com.model.FlightTicket;
+import org.dfernandez.lastminute.com.util.Utils;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -53,7 +54,7 @@ public class PassengerTypeRule implements PriceRule {
             totalPrice = totalPrice.add(infantPrice.multiply( new BigDecimal(numInfants)));
         }
 
-        return totalPrice.setScale(2, RoundingMode.HALF_EVEN);
+        return Utils.setBigDecimalScale(totalPrice);
 
     }
 }

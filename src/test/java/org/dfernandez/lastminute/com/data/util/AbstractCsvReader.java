@@ -1,4 +1,4 @@
-package org.dfernandez.lastminute.com.utils;
+package org.dfernandez.lastminute.com.data.util;
 
 import java.io.BufferedReader;
 import java.io.File;

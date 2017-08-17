@@ -3,9 +3,9 @@ package org.dfernandez.lastminute.com.data;
 import org.dfernandez.lastminute.com.model.Airline;
 import org.dfernandez.lastminute.com.model.Airport;
 import org.dfernandez.lastminute.com.model.Flight;
-import org.dfernandez.lastminute.com.utils.AirlineCsvReader;
-import org.dfernandez.lastminute.com.utils.AirportCsvReader;
-import org.dfernandez.lastminute.com.utils.FlightsCsvReader;
+import org.dfernandez.lastminute.com.data.util.AirlineCsvReader;
+import org.dfernandez.lastminute.com.data.util.AirportCsvReader;
+import org.dfernandez.lastminute.com.data.util.FlightsCsvReader;
 import org.junit.Before;
 import org.junit.Test;
 

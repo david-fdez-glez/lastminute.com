@@ -1,4 +1,4 @@
-package org.dfernandez.lastminute.com.utils;
+package org.dfernandez.lastminute.com.data.util;
 
 import org.dfernandez.lastminute.com.model.Airline;
 
